@@ -6,6 +6,15 @@ services:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin4
+        hostname: pgadmin4
+        environment:
+            - PGADMIN_DEFAULT_EMAIL= 'abl@souunit.com.br'
+            - PGADMIN_DEFAULT_PASSWORD= 'abl2021'
+        depends_on:
+            - postgres
     scheduler:
         image: apache/airflow
         command: scheduler

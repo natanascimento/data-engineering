@@ -15,6 +15,8 @@ services:
             - PGADMIN_DEFAULT_PASSWORD= abl2021
         depends_on:
             - postgres
+        ports:
+            - "18080:80"
     scheduler:
         image: apache/airflow
         command: scheduler

@@ -11,8 +11,8 @@ services:
         container_name: pgadmin4
         hostname: pgadmin4
         environment:
-            - PGADMIN_DEFAULT_EMAIL= 'abl@souunit.com.br'
-            - PGADMIN_DEFAULT_PASSWORD= 'abl2021'
+            - PGADMIN_DEFAULT_EMAIL= abl@souunit.com.br
+            - PGADMIN_DEFAULT_PASSWORD= abl2021
         depends_on:
             - postgres
     scheduler:
